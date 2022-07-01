@@ -15,9 +15,9 @@ default_floating_border normal
 hide_edge_borders none
 
 # change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+# bindsym $mod+u border none
+# bindsym $mod+y border pixel 1
+# bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec terminal
+# bindsym i$mod+Return exec terminal
 
 # using alacritty terminal
 bindsym $mod+Return exec alacritty
@@ -40,6 +40,16 @@ bindsym $mod+o exec --no-startup-id dmenu_recency
 
 # launch categorized menu
 bindsym $mod+d exec --no-startup-id morc_menu
+
+# launch web browser : firefox
+bindsym $mod+w firefox
+
+# launch file explorer : pcmanfm
+bindsym $mod+f pcmanfm
+
+# launch password manager : keepass
+bindsym $mod+p keepass
+
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -131,11 +141,11 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+Shift+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
