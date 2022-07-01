@@ -42,13 +42,13 @@ bindsym $mod+o exec --no-startup-id dmenu_recency
 bindsym $mod+d exec --no-startup-id morc_menu
 
 # launch web browser : firefox
-bindsym $mod+w firefox
+bindsym $mod+w exec firefox
 
 # launch file explorer : pcmanfm
-bindsym $mod+f pcmanfm
+bindsym $mod+f exec pcmanfm
 
 # launch password manager : keepass
-bindsym $mod+p keepass
+bindsym $mod+p exec keepass
 
 
 ################################################################################################
@@ -70,7 +70,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 # bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
+# bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
