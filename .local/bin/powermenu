@@ -1,0 +1,9 @@
+#!/bin/sh
+result=$(printf "Lock\nRestart\nPower_off" | rofi -dmenu -i)
+
+case "$result" in
+  "Lock") i3lock --color="#000000" ;;
+  "Restart") reboot ;;
+  "Power_off") poweroff ;;
+  *) exit 1 ;;
+esac
