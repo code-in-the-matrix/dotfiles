@@ -1,0 +1,39 @@
+"" Source your .vimrc
+"source ~/.ideavimrc
+
+set scrolloff=5
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+let mapleader=" "
+
+" Do incremental searching.
+set incsearch
+set relativenumber
+set number
+
+"toggle distraction free mode
+nnoremap <c-d> :action ToggleDistractionFreeMode<CR>
+
+"open terminal
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+inoremap jk <Esc>
+"map jk <Esc>
+set timeoutlen=1000
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Doesn't work for some reason -> nnoremap <leader><TAB> :action NextTab<CR>
+nnoremap <leader><leader><TAB> :action NextTab<CR>
+nnoremap <leader><TAB><TAB> :action PreviousTab<CR>
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
