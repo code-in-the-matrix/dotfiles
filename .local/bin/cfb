@@ -1,0 +1,6 @@
+#!/bin/sh
+wal=$(grep -v '^#' ~/.local/bin/snippets.txt | rofi -dmenu|cut -d '#' -f1)
+
+#echo $wal | xclip -sel c
+echo $wal | tr -d '\n' | xclip -sel c
+
