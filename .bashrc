@@ -1,5 +1,6 @@
 #Add
-PATH="$PATH:~/.local/bin"
+#PATH="$PATH:~/.local/bin"
+PATH="$PATH:$HOME/.local/bin"
 
 case $- in
     *i*) ;;
@@ -125,4 +126,5 @@ export MAVEN_HOME
 PATH="$PATH:$MAVEN_HOME/bin"
 export PATH
 
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
+
