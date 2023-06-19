@@ -1,9 +1,11 @@
 #!/bin/sh
-xrandr --addmode HDMI-1 1920x1080 
+xrandr --addmode HDMI1 1920x1080 
+#xrandr --addmode eDP1 1920x1080 
+xrandr --addmode eDP1 1366x768 
 # xrandr --output HDMI-1 --mode 1920x1080 --output eDP-1 --mode 1920x1080 --right-of HDMI-1
 
 #!/bin/sh
-result=$(printf "eDP-1 only\nHDMI-1 only\nboth eDP and HDMI" | rofi -dmenu -i)
+result=$(printf "eDP-1 only\nHDMI-1 only\nreplica\nboth eDP and HDMI separately" | rofi -dmenu -i)
 
 case "$result" in
   "eDP-1 only")
@@ -11,7 +13,10 @@ case "$result" in
   "HDMI-1 only")
     mon-hdmi ;;
   "both eDP and HDMI")
-    xrandr --output HDMI-1 --primary --mode 1920x1080 --output eDP-1 --mode 1920x1080 --right-of HDMI-1;;
+    xrandr --output HDMI1 --primary --mode 1920x1080 --output eDP1 --mode 1366x768 --right-of HDMI1;;
+    #xrandr --output HDMI1 --primary --mode 1920x1080 --output eDP1 --mode 1920x1080 --right-of HDMI1;;
+  "replica")
+    xrandr --output HDMI1 --mode 1920x1080 --output eDP1 --mode 1366x768;;
   *) exit 1 ;;
 esac
 

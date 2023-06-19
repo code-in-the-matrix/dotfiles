@@ -1,4 +1,4 @@
 #!/bin/sh
-xrandr --addmode HDMI-1 1920x1080 
+xrandr --addmode HDMI1 1920x1080 
 
-xrandr --output eDP-1 --primary --mode 1920x1080 --output HDMI-1 --off 
+xrandr --output eDP1 --primary --mode 1366x768 --output HDMI-1 --off 
