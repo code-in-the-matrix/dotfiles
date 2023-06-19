@@ -22,15 +22,16 @@ set nobackup
 set undodir=~/.vim/undordir
 set undofile 
 set incsearch
+"set clipboard=unnamed
 set clipboard=unnamedplus
 "set cursorline
 
 " Column set to column 100
-" set colorcolumn=100
+"set colorcolumn=100
 
 
 " Column color set to grey
-highlight ColorColumn ctermbg=1
+"highlight ColorColumn ctermbg=1
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -61,7 +62,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " This plugin adds Go language support for Vim, with many features
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Python code formatter
 Plug 'ambv/black'
