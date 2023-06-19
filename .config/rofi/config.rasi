@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,run,ssh,drun";
+	modi: "window,run,ssh,drun,combi";
 	display-drun: "Apps:";
 	font: "mono 14";
 	location: 0;
