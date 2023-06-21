@@ -106,7 +106,6 @@ fi
 
 #Manual additions start from here
 #custom variables
-export bfiles="/media/files/bak"
 
 #set -o vi
 
@@ -115,7 +114,10 @@ source ~/.color
 export PS1="\[${green}\]\u@\h\[${reset}\]: \[${blue}\]\w\n\[${purple}\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[${reset}\]\\$ \[$(tput sgr0)\]"
 
 # exports
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+# default jdk installed in ubuntu
+#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
 # Flutter path
 export PATH="$PATH:/home/swayam/applications/flutter/bin"
