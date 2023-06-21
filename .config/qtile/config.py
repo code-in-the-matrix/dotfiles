@@ -207,7 +207,9 @@ screens = [
                     highlight_method="block",
                     rounded=False,
                     toggle=True,
-                    inactive="#AAAAAA",
+                    # inactive="#AAAAAA",
+                    # inactive="#444444",
+                    inactive="#777777",
                     active="#FFFFFF",
                     # active"#000000",
                     # this_current_screen_border="#49a4f8",  # default color #215578
