@@ -12,7 +12,7 @@ sct 3300 &
 # volumeicon &
 
 # setting wallpapers
-#nitrogen --restore &
+nitrogen --restore &
 # /home/swayam/.local/bin/random-wallpaper &
 
 # /home/swayam/.local/bin/mon-hdmi &
