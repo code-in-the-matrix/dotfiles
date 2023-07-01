@@ -14,7 +14,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias config='/usr/bin/git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
 
 #pomodoro timer
-alias pomo25="termdown 25m && feh ~/.config/backgrounds/black_screen_wal.jpg -xFZ"
+#alias pomo25="termdown 25m && feh ~/.config/backgrounds/black_screen_wal.jpg -xFZ"
+alias pomo25="termdown 25m && i3lock"
 
 alias docker-compose='docker compose'
 
