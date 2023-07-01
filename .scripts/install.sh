@@ -37,3 +37,9 @@ sudo pacman -S docker-compose
 sudo groupadd docker
 sudo usermod -aG docker $USER
 #newgrp docker
+
+sudo pacman -S lxappearance
+
+sudo pacman -S dosfstools
+sudo pacman -S gparted
+
