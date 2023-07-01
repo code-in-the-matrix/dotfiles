@@ -6,3 +6,6 @@ xrandr --output HDMI1 --primary --mode 1920x1080 --output eDP1 --off
 # TV connection
 #xrandr --addmode HDMI-1 1360x768
 #xrandr --output HDMI-1 --primary --mode 1360x768 --output eDP-1 --off
+
+nitrogen --restore
+
