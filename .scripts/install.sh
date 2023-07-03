@@ -45,3 +45,6 @@ sudo pacman -S dosfstools
 sudo pacman -S gparted
 
 sudo pacman -S cronie
+sudo systemctl enable cronie
+sudo systemctl start cronie
+
