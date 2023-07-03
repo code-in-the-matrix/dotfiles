@@ -1,3 +1,4 @@
+#!/bin/sh
 
 sudo pacman -Syu
 sudo pacman -S gvim git pcmanfm curl wget
@@ -43,3 +44,4 @@ sudo pacman -S lxappearance
 sudo pacman -S dosfstools
 sudo pacman -S gparted
 
+sudo pacman -S cronie
