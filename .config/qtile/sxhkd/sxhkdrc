@@ -1,15 +1,4 @@
-super + f
-	pcmanfm 
-
-super + p
-	maim --select | xclip -selection clipboard -t image/png 
-	
-super + shift + p
-	maim --select | tee ~/Pictures/(date +%s).png | xclip -selection clipboard -t image/png 
-
-super + shift + s 
-  libreoffice /home/swayam/files/work/docs/Schedule.ods
-
+# volume keys
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioLowerVolume
@@ -18,9 +7,26 @@ XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 
+# brightness keys
 XF86MonBrightnessUp
 	light -A 5
 XF86MonBrightnessDown
 	light -U 5
 
+
+# custom shortcut
+super + shift + s 
+  libreoffice /home/swayam/files/work/docs/Schedule.ods
+
+
+#super + f
+	#pcmanfm 
+
+#This works, but we are doing this from the wm itself
+#super + p
+	#maim --select | xclip -selection clipboard -t image/png 
+	
+#This has some error
+#super + shift + p
+	#maim --select | tee ~/pictures/(date +%s).png | xclip -selection clipboard -t image/png 
 

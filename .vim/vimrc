@@ -1,3 +1,5 @@
+" Map escape to jk
+imap jk <Esc>
 syntax on
 
 " Set FZF Default to Ripgrep (must install ripgrep)

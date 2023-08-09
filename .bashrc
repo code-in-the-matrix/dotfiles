@@ -1,6 +1,8 @@
 #Add
-#PATH="$PATH:~/.local/bin"
-PATH="$PATH:$HOME/.local/bin"
+#PATH="$PATH:/usr/local/bin:/usr/bin:/bin"
+#PATH="$PATH:$HOME/.local/bin"
+#PATH="$PATH:$HOME/.config/emacs/bin"
+
 
 case $- in
     *i*) ;;
@@ -117,16 +119,16 @@ export PS1="\[${green}\]\u@\h\[${reset}\]: \[${blue}\]\w\n\[${purple}\]\$(git br
 # default jdk installed in ubuntu
 #export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
-# Flutter path
-export PATH="$PATH:/home/swayam/applications/flutter/bin"
+## Flutter path
+#export PATH="$PATH:/home/swayam/applications/flutter/bin"
 
-# Apache maven
-MAVEN_HOME="/home/swayam/applications/apache-maven-3.9.1"
-export MAVEN_HOME
-PATH="$PATH:$MAVEN_HOME/bin"
-export PATH
+## Apache maven
+#MAVEN_HOME="/home/swayam/applications/apache-maven-3.9.1"
+#export MAVEN_HOME
+#PATH="$PATH:$MAVEN_HOME/bin"
+#export PATH
 
 #. "$HOME/.cargo/env"
 

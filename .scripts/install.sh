@@ -48,3 +48,22 @@ sudo pacman -S cronie
 sudo systemctl enable cronie
 sudo systemctl start cronie
 
+
+
+
+
+sudo pacman -S texlive-basic
+sudo pacman -S texlive-latex
+sudo pacman -S texlive-latexextra
+sudo pacman -S texlive-latexrecommended
+sudo pacman -S texlive-plaingeneric
+sudo pacman -S texlive-bibextra
+sudo pacman -S texlive-xetex
+sudo pacman -S texlive-mathscience
+
+
+sudo pacman -S dosfstools
+sudo pacman -S mtools
+
+
+sudo pacman -S net-tools

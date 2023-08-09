@@ -17,4 +17,4 @@ nitrogen --restore &
 
 # /home/swayam/.local/bin/mon-hdmi &
 
-
+#/usr/bin/emacs --daemon &

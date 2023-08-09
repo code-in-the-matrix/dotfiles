@@ -93,7 +93,7 @@ URxvt*color20:                        #43a5d5
 URxvt*color21:                        #eeeeee
 
 
-Xcursor.theme: xcursor-breeze
+Xcursor.theme:                    xcursor-breeze
 Xcursor.size:                     0
 URxvt.font:                       xft:monospace:size=20
 
@@ -279,3 +279,15 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! -xos4-terminus-bold-r-normal--24-240-72-72-c-120-iso10646-1
 ! -xos4-terminus-bold-r-normal--28-280-72-72-c-140-iso10646-1
 ! -xos4-terminus-bold-r-normal--32-320-72-72-c-160-iso10646-1
+!
+
+
+
+
+
+!
+!---
+xmenu.background: #292d3E
+xmenu.foreground: #dedede
+xmenu.selbackground: #3584E4
+xmenu.selforeground: #FFFFFF

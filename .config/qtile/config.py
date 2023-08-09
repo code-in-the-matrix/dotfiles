@@ -13,11 +13,12 @@ from libqtile.lazy import lazy
 
 def screenshot(save=True, copy=True):
     def f(qtile):
-        path = Path.home() / "Pictures"
+        path = Path.home() / "pictures"
         path /= f"screenshot_{str(int(time() * 100))}.png"
-        shot = subprocess.run(["maim", "--select", "|"], stdout=subprocess.PIPE)
+        # shot = subprocess.run(["maim", "--select", "|"], stdout=subprocess.PIPE)
+        shot = subprocess.run(["maim", "--select"], stdout=subprocess.PIPE)
 
-        if save:
+        if shot is not None and save:
             with open(path, "wb") as sc:
                 sc.write(shot.stdout)
 
@@ -31,6 +32,7 @@ def screenshot(save=True, copy=True):
 
 
 mod = "mod4"
+alt = "mod1"
 terminal = "alacritty"
 homePath = str(Path.home())
 
@@ -57,16 +59,44 @@ keys = [
         lazy.layout.shuffle_right(),
         desc="Move window to the right",
     ),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key(
+        [mod, "shift"],
+        "j",
+        lazy.layout.shuffle_down(),
+        desc="Move window down",
+    ),
+    Key(
+        [mod, "shift"],
+        "k",
+        lazy.layout.shuffle_up(),
+        desc="Move window up",
+    ),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
     Key(
-        [mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"
+        [mod, "control"],
+        "h",
+        lazy.layout.grow_left(),
+        desc="Grow window to the left",
     ),
-    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
+    Key(
+        [mod, "control"],
+        "l",
+        lazy.layout.grow_right(),
+        desc="Grow window to the right",
+    ),
+    Key(
+        [mod, "control"],
+        "j",
+        lazy.layout.grow_down(),
+        desc="Grow window down",
+    ),
+    Key(
+        [mod, "control"],
+        "k",
+        lazy.layout.grow_up(),
+        desc="Grow window up",
+    ),
     # Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -79,11 +109,15 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key(
+        [alt],
+        "Tab",
+        lazy.spawn("rofi -show window"),
+        desc="Toggle between layouts",
+    ),
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "space", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "shift"], "x", lazy.shutdown(), desc="Shutdown Qtile"),
     # Key([mod], "o", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key(
         [mod],
@@ -94,8 +128,9 @@ keys = [
         desc="Spawn a command using a prompt widget",
     ),
     Key([mod], "a", lazy.spawn("pavucontrol"), desc="Spawn a volume control"),
+    # Key([mod], "p", lazy.spawn("pavucontrol"), desc="Spawn a volume control"),
     Key([mod], "w", lazy.spawn("firefox"), desc="Spawn firefox"),
-    # Key([mod], "f", lazy.spawn("pcmanfm"), desc="Spawn file manager"),
+    Key([mod], "f", lazy.spawn("pcmanfm"), desc="Spawn file manager"),
     Key(
         [mod, "shift"],
         "e",
@@ -103,11 +138,11 @@ keys = [
         lazy.spawn(homePath + "/.local/bin/powermenu"),
         desc="Spawn a prompt to show lock and shutdown options.",
     ),
-    #    Key(
-    #        [mod, "shift"],
-    #        "p",
-    #        lazy.function(screenshot()),
-    #    ),
+    Key(
+        [mod],
+        "p",
+        lazy.function(screenshot()),
+    ),
     Key([mod, "shift"], "m", lazy.hide_show_bar(), desc="Toggle top bar"),
     Key(
         [mod, "control"],
@@ -127,6 +162,8 @@ keys = [
         lazy.to_screen(2),
         desc="Keyboard focus to monitor 3 (right most)",
     ),
+    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key([mod, "shift"], "x", lazy.shutdown(), desc="Shutdown Qtile"),
 ]
 
 groups = [Group(i) for i in "1234567890"]
@@ -145,13 +182,9 @@ for i in groups:
             Key(
                 [mod, "shift"],
                 i.name,
-                lazy.window.togroup(i.name, switch_group=True),
-                desc="Switch to & move focused window to group {}".format(i.name),
+                lazy.window.togroup(i.name, switch_group=False),
+                desc="Move focused window to group {}".format(i.name),
             ),
-            # Or, use below if you prefer not to switch to that group.
-            # # mod1 + shift + letter of group = move focused window to group
-            # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-            #     desc="move focused window to group {}".format(i.name)),
         ]
     )
 
@@ -176,6 +209,7 @@ layouts = [
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
+    layout.Floating(),
 ]
 
 widget_defaults = dict(
@@ -195,7 +229,8 @@ screens = [
                     filename="~/.config/qtile/images/ying_yang_32.png",
                     scale="False",
                     mouse_callbacks={
-                        "Button1": lambda: os.system("rofi -show drun"),
+                        "Button1": lambda: os.system(homePath + "/.local/bin/xmenu.sh"),
+                        # "Button1": lambda: os.system("rofi -show drun"),
                         # "Button1": lambda: qtile.cmd_spawn("rofi -show drun"),
                         # "Button1": lambda: lazy.spawn("rofi -show drun"),
                     },
@@ -321,3 +356,7 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+
+# references
+# https://github.com/qtile/qtile-examples/blob/master/sweenu/keys.py#L111
