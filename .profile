@@ -18,5 +18,11 @@ PATH="$PATH:$MAVEN_HOME/bin"
 # Added by Toolbox App
 PATH="$PATH:/home/swayam/.local/share/JetBrains/Toolbox/scripts"
 
+PATH="$PATH:/home/swayam/.pub-cache/bin"
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/swayam/applications/google-cloud-sdk/path.bash.inc' ]; then . '/home/swayam/applications/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/swayam/applications/google-cloud-sdk/completion.bash.inc' ]; then . '/home/swayam/applications/google-cloud-sdk/completion.bash.inc'; fi
 

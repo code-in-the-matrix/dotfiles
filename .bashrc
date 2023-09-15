@@ -132,3 +132,10 @@ export PS1="\[${green}\]\u@\h\[${reset}\]: \[${blue}\]\w\n\[${purple}\]\$(git br
 
 #. "$HOME/.cargo/env"
 
+
+
+
+
+
+#export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+export CHROME_EXECUTABLE=/usr/bin/chromium

@@ -2,8 +2,11 @@ configuration {
 	modi: "window,run,ssh,drun,combi";
 	display-drun: "apps:";
 	font: "mono 14";
-	location: 0;
+  location: 1;
+  yoffset: 24;
+/*  xoffset: 0;*/
 }
+
 
 @theme "/dev/null"
 
@@ -52,7 +55,7 @@ configuration {
     highlight:     bold #ffffff;
 }
 #window {
-    height:   75%;
+    height:   100%;
     width: 25em;
     location: north west;
     anchor:   north west;

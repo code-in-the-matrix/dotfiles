@@ -67,3 +67,6 @@ sudo pacman -S mtools
 
 
 sudo pacman -S net-tools
+
+sudo pacman -S linux-firmware-qlogic
+sudo pacman -S ninja cmake
