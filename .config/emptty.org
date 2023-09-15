@@ -1,0 +1,12 @@
+#+title: Emptty
+
+[[https://github.com/tvrzna/emptty/][Emptty Login(Display) Manager]]
+Simple CLI display manager.
+Current Display manager of choice.
+
+** Load .profile
+By default .profile wasn't getting loaded. Hence an 'emptty' file was created for the same.
+** You can always default to using startx [[https://www.youtube.com/watch?v=dtuy09mqBPI][Eliminate display manager using startx]]
+
+** SDDM also works.
+** Have faced issues with lightdm and ly

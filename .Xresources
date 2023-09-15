@@ -1,3 +1,4 @@
+!---common---
 *background:                      #222D31
 *foreground:                      #d8d8d8
 *fading:                          8
@@ -38,8 +39,15 @@
 *color7:                          #d8d8d8
 *color15:                         #f8f8f8
 
-!! URxvt configurations
 
+!---xmenu configurations start---!
+xmenu.background:                 #292d3E
+xmenu.foreground:                 #dedede
+xmenu.selbackground:              #3584E4
+xmenu.selforeground:              #FFFFFF
+!---xmenu configurations end---!
+
+!---URxvt configurations start---!
 URxvt*background:                     [100]#000000
 !URxvt*foreground:                     #d6d6d6
 URxvt*foreground:                     #ffffff
@@ -263,6 +271,8 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*tabbar-fg:                  colour
 ! URxvt*url-launcher:               string
 
+!---URxvt configurations end---!
+
 ! The Terminus font uses the following X-names:
 ! -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 ! -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
@@ -285,9 +295,3 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 
 
 
-!
-!---
-xmenu.background: #292d3E
-xmenu.foreground: #dedede
-xmenu.selbackground: #3584E4
-xmenu.selforeground: #FFFFFF

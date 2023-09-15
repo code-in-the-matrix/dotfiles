@@ -1,0 +1,6 @@
+#!/bin/sh
+Selection=true
+
+. ~/.profile
+
+exec dbus-launch $@
