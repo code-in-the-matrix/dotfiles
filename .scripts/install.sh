@@ -1,5 +1,4 @@
 #!/bin/sh
-
 sudo pacman -Syu
 sudo pacman -S gvim git pcmanfm curl wget
 sudo pacman -S firefox
@@ -8,7 +7,9 @@ sudo pacman -S python-psutil
 sudo pacman -S neofetch
 sudo pacman -S xorg xorg-xinit 
 sudo pacman -S alacritty
-sudo pacman -S xf86-video-intel
+sudo pacman -S xf86-video-amdgpu
+sudo pacman -S amd-ucode
+#sudo pacman -S xf86-video-intel
 sudo pacman -S qtile
 sudo pacman -S rofi
 sudo pacman -S sxhkd
@@ -70,3 +71,4 @@ sudo pacman -S net-tools
 
 sudo pacman -S linux-firmware-qlogic
 sudo pacman -S ninja cmake
+
