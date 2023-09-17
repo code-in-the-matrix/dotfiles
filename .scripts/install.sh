@@ -12,7 +12,7 @@ sudo pacman -S amd-ucode
 #sudo pacman -S xf86-video-intel
 sudo pacman -S qtile
 sudo pacman -S rofi
-sudo pacman -S sxhkd
+sudo pacman -S sxhkd i3lock
 sudo pacman -S fzf mpv keepassxc light
 sudo pacman -S alsa-utils pulseaudio pavucontrol
 sudo pacman -S udisks2 udiskie
@@ -70,5 +70,5 @@ sudo pacman -S mtools
 sudo pacman -S net-tools
 
 sudo pacman -S linux-firmware-qlogic
-sudo pacman -S ninja cmake
+sudo pacman -S clang cmake ninja gtk3
 
