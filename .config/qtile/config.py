@@ -271,12 +271,15 @@ screens = [
                     update_interval=5.0,
                 ),
                 widget.Sep(linewidth=0, padding=10),
+                widget.TextBox(text="mem:"),
                 widget.Memory(
                     measure_mem="G",
                     update_interval=5.0,
                 ),
                 # widget.Net(),
                 widget.Sep(linewidth=0, padding=10),
+                # widget.BatteryIcon(),
+                # widget.TextBox(text="vol:"),widget.PulseVolume(),
                 widget.Battery(
                     format=" {percent:2.0%} {char}",
                     charge_char="ac",
